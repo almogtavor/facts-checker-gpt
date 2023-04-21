@@ -1,4 +1,4 @@
-# FactsCheckerGPT
+# 🦙⚖️ FactsCheckerGPT
 
 Perform facts checks on your conversations with LLMs to catch fake-news, misleading information, and LLMs confusion.
 FactsCheckerGPT enables you to talk to ChatGPT, and to validate each response against an "army" of LLMs.
@@ -19,7 +19,7 @@ python -m facts_checker_gpt
 You can start asking questions:
 ![usage-example.png](docs%2Fimages%2Fusage-example.png)
 
-## Enable Alpaca
+## 🦙 Enable Alpaca
 
 To use Alpaca, follow the getting started guide of [alpaca.cpp](https://github.com/antimatter15/alpaca.cpp#get-started-7b).
 After you've downloaded both files, update your `.env` file:
