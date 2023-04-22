@@ -49,8 +49,9 @@ class Config(metaclass=Singleton):
         self.temperature = float(os.getenv("TEMPERATURE", "1"))
         self.execute_local_commands = os.getenv('EXECUTE_LOCAL_COMMANDS', 'False') == 'True'
 
-        self.agent_1_model = os.getenv("AGENT1_MODEL", "gpt-4")
-        self.agent_2_model = os.getenv("AGENT2_MODEL", "gpt-3.5-turbo")
+        self.chatbot_agent_1_model = os.getenv("CHATBOT_AGENT1_MODEL", "gpt-4")
+        self.chatbot_agent_2_model = os.getenv("CHATBOT_AGENT2_MODEL", "gpt-3.5-turbo")
+        self.fact_checker_agent_model = os.getenv("FACT_CHECKER_AGENT_MODEL", "gpt-3.5-turbo")
         self.agent_3_model = os.getenv("AGENT3_MODEL")
 
         self.alpaca_model_path = os.getenv("ALPACA_MODEL_PATH")

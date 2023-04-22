@@ -13,6 +13,7 @@ class Alpaca:
         self.system_info: Optional[dict] = None
         self.lock = Lock()
         self.start()
+        self._write("")
 
     def start(self):
         if self.process is not None:
@@ -39,9 +40,9 @@ class Alpaca:
             time.sleep(3)
             self.process = None
 
-    def run(self, request: str) -> str:
+    def run(self, prompt: str) -> str:
         with self.lock:
-            self._write(request)
-            time.sleep(5)
+            self._write(prompt)
+            time.sleep(2)
             response = self._read_stdout()
         return response

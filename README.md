@@ -5,7 +5,20 @@ FactsCheckerGPT enables you to talk to ChatGPT, and to validate each response ag
 As the FactChecker Agent2, the user can choose a different LLM, such as GPT3.5 / Alpaca (more to be added soon).
 Currently, there is no support for multiple FactCheckers.
 
-<img src="docs/images/facts-checker-gpt_.drawio.png" width="850">
+
+The application has multiple modes:
+* **JudgeLLM** - Just like in the scenario of AI as a judge in a court, multiple agents answers the prompt, and the judge agent needs to decide what's the right answer.
+* **LLMs Competition** - multiple agents answers the prompt, and another agent needs to decide if they've answered the same.
+If they didn't, they will need to answer the prompt once more (with viewing the previous answers).
+* **FactsChecker - Prompts Feeding Mode** - one agent answers the prompt, and the others viewing the answers, deciding whether its right or wrong.
+
+<img src="docs/images/facts-checker-gpt.drawio.png" width="850">
+
+<details>
+<summary>Alternative architecture:</summary>
+<img src="docs/images/facts-checker-gpt_prompts-feeding-mode.drawio.png" width="850">
+</details>
+
 
 ## 🔧 Usage
 
@@ -17,7 +30,8 @@ python -m facts_checker_gpt
 ```
 
 You can start asking questions:
-![usage-example.png](docs%2Fimages%2Fusage-example.png)
+
+![usage-example.png](docs%2Fimages%2Fusage-example-prompts-feeding-mode.png)
 
 ## 🦙 Enable Alpaca
 
